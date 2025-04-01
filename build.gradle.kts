@@ -21,11 +21,14 @@ repositories {
 extra["springAiVersion"] = "1.0.0-M6"
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
+	implementation("org.springframework.ai:spring-ai-ollama-spring-boot-starter")
 	implementation("org.springframework.ai:spring-ai-core:1.0.0-M6")
+	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")

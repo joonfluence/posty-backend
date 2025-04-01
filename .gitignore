@@ -40,3 +40,4 @@ out/
 .env
 
 /src/main/resources/output
+/src/main/resources/application-local.yaml

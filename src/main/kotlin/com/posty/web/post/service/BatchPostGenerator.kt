@@ -1,6 +1,7 @@
-package com.posty.web.service
+package com.posty.web.post.service
 
 import com.posty.web.client.CustomChatClient
+import com.posty.web.post.controller.GenerateRequest
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Service
 import java.io.File
@@ -18,7 +19,9 @@ class BatchPostGenerator(
         keywordFile.readLines()
             .filter { it.isNotBlank() }
             .forEachIndexed { index, keyword ->
-                val content = chatClient.call(keyword)
+                val content = chatClient.call(
+                    GenerateRequest(keyword)
+                )
                 val safeFileName = "${"%02d".format(index + 1)}-${keyword.replace(" ", "_")}.html"
                 File(outputDir, safeFileName).writeText(content, Charsets.UTF_8)
 
