@@ -1,5 +1,6 @@
 package com.posty.web.post.controller
 
+import com.posty.web.post.service.PostService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

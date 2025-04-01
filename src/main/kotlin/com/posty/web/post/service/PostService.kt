@@ -1,6 +1,7 @@
-package com.posty.web.post.controller
+package com.posty.web.post.service
 
 import com.posty.web.client.CustomChatClient
+import com.posty.web.post.controller.GenerateRequest
 import com.posty.web.post.event.EvaluateContentEvent
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Service
